@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: adwumatech-ai-aliatek
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NEWS_API_KEY
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
