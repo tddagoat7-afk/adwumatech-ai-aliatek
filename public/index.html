@@ -3,121 +3,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#02040a" />
+  <meta name="theme-color" content="#02030a" />
   <title>Aliatek Intelligence OS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <canvas id="spaceCanvas" aria-hidden="true"></canvas>
-  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div>
+  <div class="nebula nebula-a"></div><div class="nebula nebula-b"></div><div class="nebula nebula-c"></div>
 
   <section id="welcome" class="welcome">
-    <div class="planet"></div>
-    <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+    <div class="alien-core"><span></span><i></i><b></b></div>
+    <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
     <div class="welcome-content">
-      <div class="signal"><span></span> ALIATEK INTELLIGENCE OS · V11</div>
-      <h1>Enter the<br><em>Intelligence Galaxy.</em></h1>
-      <p>Search the global information field. Detect reputation, risk, opportunity, and momentum from public evidence.</p>
-      <div class="welcome-actions">
-        <button id="enterBtn" class="cta" type="button">Launch Intelligence OS <span>↗</span></button>
-        <button id="demoBtn" class="ghost" type="button">Run demo search</button>
-      </div>
-      <div class="telemetry"><span>11 live channels</span><span>2,000 signals/query</span><span>300+ motion states</span></div>
+      <div class="signal"><span></span> ALIATEK EXTRATERRESTRIAL INTELLIGENCE GRID · V12</div>
+      <h1>Enter the<br><em>Alien Intelligence Field.</em></h1>
+      <p>Scan the global information galaxy. Detect reputation, risk, momentum, narrative shifts, and executive opportunity from verified public evidence.</p>
+      <div class="welcome-actions"><button id="enterBtn" class="cta" type="button">Initialize System <span>↗</span></button><button id="demoBtn" class="ghost" type="button">Run live demo</button></div>
+      <div class="telemetry"><span>11 live channels</span><span>2,500 signals/query</span><span>4 interactive intelligence charts</span><span>300+ motion states</span></div>
     </div>
   </section>
 
   <div id="app" class="app" aria-hidden="true">
     <aside class="sidebar">
-      <div class="logo"><span class="logo-core"></span><div><strong>Aliatek</strong><small>Intelligence OS</small></div></div>
+      <div class="logo"><span class="logo-core"></span><div><strong>Aliatek</strong><small>Alien Intelligence OS</small></div></div>
       <nav>
-        <button class="nav-btn active" data-target="overview" type="button">Overview</button>
+        <button class="nav-btn active" data-target="overview" type="button">Command</button>
         <button class="nav-btn" data-target="signals" type="button">Signals</button>
+        <button class="nav-btn" data-target="analytics" type="button">Analytics</button>
         <button class="nav-btn" data-target="evidence" type="button">Evidence</button>
         <button class="nav-btn" data-target="report" type="button">Report</button>
       </nav>
-      <div class="system-status"><span></span> System online</div>
+      <div class="system-status"><span></span> Orbital network online</div>
     </aside>
 
     <main>
-      <header class="topbar">
-        <div><small>LIVE INTELLIGENCE WORKSPACE</small><h2 id="pageTitle">Overview</h2></div>
-        <div class="top-actions">
-          <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle contrast">◐</button>
-          <button id="exportBtn" class="icon-btn" type="button" aria-label="Export CSV">⇩</button>
-        </div>
-      </header>
+      <header class="topbar"><div><small>ALIEN INTELLIGENCE COMMAND CENTER</small><h2 id="pageTitle">Command</h2></div><div class="top-actions"><button id="themeBtn" class="icon-btn" type="button">◐</button><button id="exportBtn" class="icon-btn" type="button">⇩</button></div></header>
 
       <section id="overview" class="search-panel revealable">
-        <div class="search-copy"><small>UNIFIED ENTITY SEARCH</small><h3>Search any company, brand, university, product, or organization.</h3></div>
-        <div class="market-toggle" role="group" aria-label="Market focus">
-          <button class="active" data-market="global" type="button">Global</button>
-          <button data-market="us" type="button">U.S. Focus</button>
-        </div>
-        <div class="search-line">
-          <label><span>⌕</span><input id="companyInput" placeholder="Try Nike, Apple, Morehouse College, OpenAI..." autocomplete="off" /></label>
-          <button id="searchBtn" class="cta compact" type="button">Run Intelligence <span>→</span></button>
-        </div>
-        <div class="periods" role="group" aria-label="Reporting period">
-          <button data-days="7" type="button">7 Days</button>
-          <button class="active" data-days="30" type="button">30 Days</button>
-          <button data-days="90" type="button">90 Days</button>
-        </div>
+        <div class="search-copy"><small>UNIFIED ENTITY SCAN</small><h3>Search any company, brand, institution, product, or organization.</h3></div>
+        <div class="market-toggle"><button class="active" data-market="global" type="button">Global</button><button data-market="us" type="button">U.S. Focus</button></div>
+        <div class="search-line"><label><span>⌕</span><input id="companyInput" placeholder="Try Nike, Apple, Morehouse College, OpenAI..." autocomplete="off" /></label><button id="searchBtn" class="cta compact" type="button">Run Intelligence <span>→</span></button></div>
+        <div class="periods"><button data-days="7" type="button">7 Days</button><button class="active" data-days="30" type="button">30 Days</button><button data-days="90" type="button">90 Days</button></div>
       </section>
 
       <section class="statusbar revealable"><div><span class="pulse"></span><strong id="statusText">Ready to scan the intelligence field</strong></div><span id="updatedText">Awaiting query</span></section>
 
       <section class="metrics">
         <article class="metric revealable"><span>Verified Mentions</span><strong data-metric="mentions">—</strong><small>Public evidence collected</small></article>
+        <article class="metric revealable"><span>Daily Average</span><strong data-metric="dailyAverage">—</strong><small>Mentions per selected day</small></article>
         <article class="metric revealable"><span>Reputation</span><strong data-metric="reputation">—</strong><small>Composite score</small></article>
         <article class="metric revealable"><span>Trust</span><strong data-metric="trust">—</strong><small>Source-weighted</small></article>
         <article class="metric danger revealable"><span>Crisis Risk</span><strong data-metric="crisisRisk">—</strong><small>Negative signal pressure</small></article>
         <article class="metric revealable"><span>Opportunity</span><strong data-metric="opportunity">—</strong><small>Positive momentum</small></article>
-        <article class="metric revealable"><span>Sources</span><strong data-metric="sources">—</strong><small>Unique publishers</small></article>
       </section>
 
       <section id="signals" class="grid">
-        <article class="panel wide revealable">
-          <div class="panel-head"><div><small>MENTION VELOCITY</small><h3>Coverage over time</h3></div><span class="tag">LIVE</span></div>
-          <div class="chart"><canvas id="timelineChart"></canvas><div id="chartTooltip" class="tooltip"></div></div>
-        </article>
-        <article class="panel revealable">
-          <div class="panel-head"><div><small>SENTIMENT FIELD</small><h3>Coverage balance</h3></div></div>
-          <div class="donut"><canvas id="sentimentChart"></canvas><div><strong id="sentimentCenter">—</strong><span>positive</span></div></div>
-          <div class="legend"><span>Positive <b id="positivePct">—</b></span><span>Neutral <b id="neutralPct">—</b></span><span>Negative <b id="negativePct">—</b></span></div>
-        </article>
-        <article class="panel revealable">
-          <div class="panel-head"><div><small>AI EXECUTIVE BRIEF</small><h3>Decision signal</h3></div><span class="tag">AI</span></div>
-          <p id="aiSummary" class="summary">Run a search to generate a grounded executive summary.</p>
-          <div id="recommendations" class="recommendations"></div>
-        </article>
+        <article class="panel wide revealable"><div class="panel-head"><div><small>MENTION VELOCITY</small><h3>Daily coverage and average</h3></div><span class="tag">LIVE</span></div><div class="chart"><canvas id="timelineChart"></canvas><div class="tooltip" id="timelineTooltip"></div></div></article>
+        <article class="panel revealable"><div class="panel-head"><div><small>SENTIMENT FIELD</small><h3>Coverage balance</h3></div></div><div class="donut"><canvas id="sentimentChart"></canvas><div><strong id="sentimentCenter">—</strong><span>positive</span></div></div><div class="legend"><span>Positive <b id="positivePct">—</b></span><span>Neutral <b id="neutralPct">—</b></span><span>Negative <b id="negativePct">—</b></span></div></article>
+        <article class="panel revealable"><div class="panel-head"><div><small>AI EXECUTIVE BRIEF</small><h3>Decision signal</h3></div><span class="tag">AI</span></div><p id="aiSummary" class="summary">Run a search to generate a grounded executive summary.</p><div id="recommendations" class="recommendations"></div></article>
+      </section>
+
+      <section id="analytics" class="grid analytics-grid">
+        <article class="panel wide revealable"><div class="panel-head"><div><small>SENTIMENT OVER TIME</small><h3>Positive, neutral, and negative daily movement</h3></div></div><div class="chart"><canvas id="sentimentTimelineChart"></canvas><div class="tooltip" id="sentimentTimelineTooltip"></div></div></article>
+        <article class="panel revealable"><div class="panel-head"><div><small>PROVIDER CONTRIBUTION</small><h3>Where signals came from</h3></div></div><div class="chart compact-chart"><canvas id="providerChart"></canvas><div class="tooltip" id="providerTooltip"></div></div></article>
+        <article class="panel revealable"><div class="panel-head"><div><small>SOURCE AUTHORITY</small><h3>Evidence quality distribution</h3></div></div><div class="chart compact-chart"><canvas id="authorityChart"></canvas><div class="tooltip" id="authorityTooltip"></div></div></article>
         <article class="panel revealable"><div class="panel-head"><div><small>TOPIC RADAR</small><h3>What coverage is about</h3></div></div><div id="topics" class="topics"><span>Awaiting intelligence</span></div></article>
-        <article class="panel revealable"><div class="panel-head"><div><small>SOURCE AUTHORITY</small><h3>Leading publishers</h3></div></div><div id="sources" class="list"></div></article>
+        <article class="panel revealable"><div class="panel-head"><div><small>LEADING PUBLISHERS</small><h3>Top source contribution</h3></div></div><div id="sources" class="list"></div></article>
         <article class="panel revealable"><div class="panel-head"><div><small>COLLECTION GRID</small><h3>Provider health</h3></div></div><div id="providers" class="providers"></div></article>
       </section>
 
-      <section id="evidence" class="evidence revealable">
-        <div class="section-head"><div><small>EVIDENCE EXPLORER</small><h3>Every insight linked to a source.</h3></div><div class="filters"><select id="sentimentFilter"><option value="all">All sentiment</option><option value="positive">Positive</option><option value="neutral">Neutral</option><option value="negative">Negative</option></select><input id="evidenceSearch" placeholder="Filter evidence..." /></div></div>
-        <div id="evidenceList" class="evidence-list"><div class="empty">Run a search to build an evidence trail.</div></div>
-      </section>
+      <section id="evidence" class="evidence revealable"><div class="section-head"><div><small>EVIDENCE EXPLORER</small><h3>Every insight linked to its source.</h3></div><div class="filters"><select id="sentimentFilter"><option value="all">All sentiment</option><option value="positive">Positive</option><option value="neutral">Neutral</option><option value="negative">Negative</option></select><input id="evidenceSearch" placeholder="Filter evidence..." /></div></div><div id="evidenceList" class="evidence-list"><div class="empty">Run a search to build an evidence trail.</div></div></section>
 
       <section id="report" class="report revealable">
-        <div class="section-head"><div><small>EXECUTIVE REPORT</small><h3>One-page decision intelligence.</h3></div><button id="printBtn" class="ghost" type="button">Print / Save PDF</button></div>
+        <div class="section-head"><div><small>EXECUTIVE INTELLIGENCE REPORT</small><h3>Expanded board-ready analysis.</h3></div><button id="printBtn" class="ghost" type="button">Print / Save PDF</button></div>
         <article class="report-sheet">
           <div class="report-top"><div class="logo"><span class="logo-core"></span><div><strong>ALIATEK</strong><small>Executive Intelligence Report</small></div></div><span id="reportPeriod">30-DAY REPORT</span></div>
-          <h2 id="reportCompany">Company Intelligence Report</h2>
-          <p id="reportSummary">Run a search to generate a grounded report.</p>
-          <div class="report-metrics"><div><span>Mentions</span><strong data-report="mentions">—</strong></div><div><span>Reputation</span><strong data-report="reputation">—</strong></div><div><span>Trust</span><strong data-report="trust">—</strong></div><div><span>Risk</span><strong data-report="crisisRisk">—</strong></div></div>
-          <div class="report-cols"><div><h4>Top Themes</h4><ul id="reportTopics"><li>Awaiting data</li></ul></div><div><h4>Recommended Actions</h4><ul id="reportRecommendations"><li>Awaiting data</li></ul></div></div>
+          <h2 id="reportCompany">Company Intelligence Report</h2><p id="reportSummary">Run a search to generate a grounded report.</p>
+          <div class="report-metrics"><div><span>Mentions</span><strong data-report="mentions">—</strong></div><div><span>Daily Avg.</span><strong data-report="dailyAverage">—</strong></div><div><span>Reputation</span><strong data-report="reputation">—</strong></div><div><span>Trust</span><strong data-report="trust">—</strong></div><div><span>Risk</span><strong data-report="crisisRisk">—</strong></div></div>
+          <div class="report-section"><h4>Executive Summary</h4><p id="reportExecutive">Awaiting data.</p></div>
+          <div class="report-grid"><div><h4>Brand Health</h4><p id="reportBrandHealth">Awaiting data.</p></div><div><h4>Mention Velocity</h4><p id="reportVelocity">Awaiting data.</p></div><div><h4>Reputation Analysis</h4><p id="reportReputation">Awaiting data.</p></div><div><h4>Risk Analysis</h4><p id="reportRisk">Awaiting data.</p></div><div><h4>Opportunity Analysis</h4><p id="reportOpportunity">Awaiting data.</p></div><div><h4>Data Quality</h4><p id="reportDataQuality">Awaiting data.</p></div></div>
+          <div class="report-cols"><div><h4>Top Intelligence Themes</h4><ul id="reportTopics"><li>Awaiting data</li></ul></div><div><h4>Recommended Executive Actions</h4><ul id="reportRecommendations"><li>Awaiting data</li></ul></div></div>
           <footer><span>Generated by Aliatek Intelligence OS</span><span id="reportDate">—</span></footer>
         </article>
       </section>
     </main>
   </div>
 
-  <div id="loading" class="loading" aria-hidden="true"><div class="loader"><i></i><i></i><i></i></div><h3>Scanning the intelligence galaxy</h3><p id="loadingText">Connecting to global sources...</p></div>
+  <div id="loading" class="loading" aria-hidden="true">
+    <div class="loading-scene"><div class="rocket">▲<i></i></div><div class="alien">◉<span>• •</span></div><div class="beam"></div></div>
+    <h3>Traversing the intelligence galaxy</h3><p id="loadingText">Connecting to orbital data channels...</p>
+  </div>
   <div id="toast" class="toast" role="status"></div>
   <script src="/app.js"></script>
 </body>
